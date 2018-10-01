@@ -5,6 +5,7 @@
 /**************************************************/
 
 #include <algorithm>
+#include <cmath>
 #include "typedefs.h"
 #include "search.h"
 #include "engine.h"

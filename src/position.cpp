@@ -5,6 +5,8 @@
 /**************************************************/
 
 #include <algorithm>
+#include <cstring>
+
 #include "typedefs.h"
 #include "constants.h"
 #include "position.h"

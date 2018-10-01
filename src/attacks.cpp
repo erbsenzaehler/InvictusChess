@@ -6,6 +6,7 @@
 
 #define USE_PEXT
 
+#include <functional>
 #include <vector>
 #ifdef USE_PEXT
 #include <immintrin.h>

@@ -4,6 +4,8 @@
 /*  ed_apostol@yahoo.com                          */
 /**************************************************/
 
+#include <cstring>
+
 #include "eval.h"
 #include "bitutils.h"
 #include "log.h"

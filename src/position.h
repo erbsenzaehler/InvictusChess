@@ -55,8 +55,8 @@ struct position_t {
 
     bool isRepeat();
     bool isMatDrawn();
-    inline int getPiece(int sq);
-    inline int getSide(int sq);
+    int getPiece(int sq);
+    int getSide(int sq);
     uint64_t getPieceBB(int pc, int c);
     uint64_t getBishopSlidersBB(int c);
     uint64_t getRookSlidersBB(int c);

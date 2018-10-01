@@ -4,11 +4,15 @@
 /*  ed_apostol@yahoo.com                          */
 /**************************************************/
 
-#include <intrin.h>
+
 #include "typedefs.h"
 #include "constants.h"
 
 //#define NOPOPCNT
+
+#ifdef _MSC_VER
+
+#include <intrin.h>
 
 #pragma intrinsic(_BitScanForward64)
 #pragma intrinsic(_BitScanReverse64)
@@ -38,5 +42,23 @@ namespace BitUtils {
     int bitCnt(uint64_t x) {
         return __popcnt64(x);
     }
-#endif
 }
+#endif
+#else
+namespace BitUtils {
+    int getFirstBit(uint64_t bb) {
+        return __builtin_ctzll(bb);
+    }
+
+     int popFirstBit(uint64_t& b) {
+       int index = __builtin_ctzll(b);
+        b &= (b - 1);
+        return index;
+    }
+
+     int bitCnt(uint64_t x) {
+        return __builtin_popcountll(x);
+    }
+}
+#endif
+
